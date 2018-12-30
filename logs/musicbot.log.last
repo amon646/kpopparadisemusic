@@ -1,0 +1,82 @@
+[24.934530258] 2018-12-30 23:37:15,653 - INFO - launcher: Starting sanity checks
+[24.934530258] 2018-12-30 23:37:15,653 - INFO - launcher: Checking for Python 3.5+
+[24.934530258] 2018-12-30 23:37:15,653 - INFO - launcher: Checking console encoding
+[24.934530258] 2018-12-30 23:37:15,653 - INFO - launcher: Setting console encoding to UTF-8
+[24.934530258] 2018-12-30 23:37:15,653 - INFO - launcher: Ensuring we're in the right environment
+[25.931835175] 2018-12-30 23:37:15,654 - INFO - launcher: Adding local bins/ folder to path
+[26.929140091] 2018-12-30 23:37:15,654 - INFO - launcher: Required checks passed.
+[26.929140091] 2018-12-30 23:37:15,654 - INFO - launcher: Optional checks passed.
+[27.925491333] 2018-12-30 23:37:15,655 - INFO - launcher: Moving old musicbot log
+
+######################### PRE-RUN SANITY CHECKS PASSED #########################
+
+[0.6423068046569824] 2018-12-30 23:37:16,270 - WARNING - musicbot.config | In config.py::MainThread(11556), line 112 in run_checks: i18n file does not exist. Trying to fallback to config/i18n/en.json.
+[0.6423068046569824] 2018-12-30 23:37:16,270 - INFO - musicbot.config | In config.py::MainThread(11556), line 123 in run_checks: Using i18n: config/i18n/en.json
+[0.6442785263061523] 2018-12-30 23:37:16,272 - DEBUG - musicbot.json | In json.py::MainThread(11556), line 8 in __init__: Init JSON obj with config/i18n/en.json
+[0.8118588924407959] 2018-12-30 23:37:16,439 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 227 in _setup_logging: Set logging level to INFO
+[0.8118588924407959] 2018-12-30 23:37:16,439 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 84 in __init__: Starting MusicBot 1.9.7
+[0.8128273487091064] 2018-12-30 23:37:16,440 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 90 in __init__: Loaded autoplaylist with 2531 entries
+[4.2013335227966309] 2018-12-30 23:37:19,829 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 1074 in on_ready: Connection established, ready to go.
+[4.2013335227966309] 2018-12-30 23:37:19,829 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 339 in _cache_app_info: Caching app info
+[6.0596103668212891] 2018-12-30 23:37:21,687 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 889 in _scheck_ensure_env: Ensuring data folders exist
+[6.0603427886962891] 2018-12-30 23:37:21,688 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 905 in _scheck_server_permissions: Checking server permissions
+[6.0603427886962891] 2018-12-30 23:37:21,688 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 909 in _scheck_autoplaylist: Auditing autoplaylist
+[6.0603427886962891] 2018-12-30 23:37:21,688 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 913 in _scheck_configs: Validating config
+[6.0603427886962891] 2018-12-30 23:37:21,688 - DEBUG - musicbot.config | In config.py::MainThread(11556), line 212 in async_validate: Validating options...
+[6.0613684654235840] 2018-12-30 23:37:21,689 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 916 in _scheck_configs: Validating permissions config
+[6.0613684654235840] 2018-12-30 23:37:21,689 - DEBUG - musicbot.permissions | In permissions.py::MainThread(11556), line 64 in async_validate: Validating permissions...
+[6.0613684654235840] 2018-12-30 23:37:21,689 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 1091 in on_ready: Connected: 528812717444956161/Kpop Paradise Music#1136
+[6.0613684654235840] 2018-12-30 23:37:21,689 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 1099 in on_ready: Owner:     270155491340976128/Akira#0962
+
+[6.0613684654235840] 2018-12-30 23:37:21,689 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 1102 in on_ready: Server List:
+[6.0623421669006348] 2018-12-30 23:37:21,690 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 1105 in on_ready:  - cube nz
+[6.0623421669006348] 2018-12-30 23:37:21,690 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 1151 in on_ready: Not bound to any text channels
+[6.0623421669006348] 2018-12-30 23:37:21,690 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 1167 in on_ready: Not autojoining any voice channels
+[21.9485902786254883] 2018-12-30 23:37:37,576 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 2734 in on_message: 270155491340976128/Akira#0962: !play bts idol
+[21.9495885372161865] 2018-12-30 23:37:37,577 - ERROR - musicbot.bot | In bot.py::MainThread(11556), line 2863 in on_message: Error in play: CommandError: The bot is not in a voice channel.  Use !summon to summon it to your voice channel.
+Traceback (most recent call last):
+  File "C:\Users\Amon mohamed\Desktop\kk\musicbot\MusicBot\musicbot\bot.py", line 2762, in on_message
+    handler_kwargs['player'] = await self.get_player(message.channel)
+  File "C:\Users\Amon mohamed\Desktop\kk\musicbot\MusicBot\musicbot\bot.py", line 578, in get_player
+    'Use %ssummon to summon it to your voice channel.' % self.config.command_prefix)
+musicbot.exceptions.CommandError: The bot is not in a voice channel.  Use !summon to summon it to your voice channel.
+[27.7696440219879150] 2018-12-30 23:37:43,397 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 2734 in on_message: 270155491340976128/Akira#0962: !summon
+[27.7706437110900879] 2018-12-30 23:37:43,398 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 2019 in cmd_summon: Joining cube nz/General
+[27.7706437110900879] 2018-12-30 23:37:43,398 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 452 in get_voice_client: Connection attempt 1 to General
+[27.7716426849365234] 2018-12-30 23:37:43,399 - VOICEDEBUG - musicbot.bot | In bot.py::MainThread(11556), line 391 in join_voice_channel: (join_voice_channel) creating futures
+[27.7716426849365234] 2018-12-30 23:37:43,399 - VOICEDEBUG - musicbot.bot | In bot.py::MainThread(11556), line 397 in join_voice_channel: (join_voice_channel) setting voice state
+[27.7716426849365234] 2018-12-30 23:37:43,399 - VOICEDEBUG - musicbot.bot | In bot.py::MainThread(11556), line 400 in join_voice_channel: (join_voice_channel) waiting for session id
+[28.0273733139038086] 2018-12-30 23:37:43,655 - VOICEDEBUG - musicbot.bot | In bot.py::MainThread(11556), line 2938 in on_voice_state_update: Voice state update for 528812717444956161/Kpop Paradise Music#1136 on cube nz/General -> [JOIN, CONNECT]
+[28.0273733139038086] 2018-12-30 23:37:43,655 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 2949 in on_voice_state_update: 528812717444956161/Kpop Paradise Music#1136 has joined cube nz/General
+[28.0283703804016113] 2018-12-30 23:37:43,656 - VOICEDEBUG - musicbot.bot | In bot.py::MainThread(11556), line 404 in join_voice_channel: (join_voice_channel) waiting for voice data
+[28.2295999526977539] 2018-12-30 23:37:43,857 - VOICEDEBUG - musicbot.bot | In bot.py::MainThread(11556), line 418 in join_voice_channel: (join_voice_channel) connecting...
+[28.4923667907714844] 2018-12-30 23:37:44,120 - VOICEDEBUG - musicbot.bot | In bot.py::MainThread(11556), line 430 in join_voice_channel: (join_voice_channel) connection successful
+[28.4923667907714844] 2018-12-30 23:37:44,120 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 478 in get_voice_client: Connected in 0.7s
+[28.4923667907714844] 2018-12-30 23:37:44,120 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 479 in get_voice_client: Connected to cube nz/General
+[28.4923667907714844] 2018-12-30 23:37:44,120 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 849 in deserialize_queue: Deserializing queue for 354145440779862018
+[28.5706665515899658] 2018-12-30 23:37:44,198 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 570 in get_player: Created player via deserialization for server 354145440779862018 with 1 entries
+[28.5726618766784668] 2018-12-30 23:37:44,200 - VOICEDEBUG - musicbot.player | In player.py::MainThread(11556), line 373 in websocket_check: Starting websocket check loop for cube nz
+[28.5736572742462158] 2018-12-30 23:37:44,201 - DEBUG - musicbot.entry | In entry.py::MainThread(11556), line 54 in get_ready_future: Created future for audio_cache\youtube-NXqkNikPpHs-BTS_Special_2018_KBS_Song_Festival_2018.12.28.webm
+[28.5736572742462158] 2018-12-30 23:37:44,201 - FFMPEG - musicbot.player | In player.py::MainThread(11556), line 330 in _play: Creating player with options: -nostdin -vn audio_cache\youtube-NXqkNikPpHs-BTS_Special_2018_KBS_Song_Festival_2018.12.28.webm
+[28.5766501426696777] 2018-12-30 23:37:44,204 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 825 in serialize_queue: Serializing queue for 354145440779862018
+[48.8545155525207520] 2018-12-30 23:38:04,482 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 2734 in on_message: 270155491340976128/Akira#0962: !skip
+[48.8575091361999512] 2018-12-30 23:38:04,485 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 825 in serialize_queue: Serializing queue for 354145440779862018
+[77.9407262802124023] 2018-12-30 23:38:33,568 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 2734 in on_message: 270155491340976128/Akira#0962: !play bts idole
+[78.5321424007415771] 2018-12-30 23:38:34,160 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 1517 in cmd_play: {'_type': 'url', 'url': 'ytsearch:bts idole', 'ie_key': None, 'extractor': 'generic', 'webpage_url': 'bts idole', 'webpage_url_basename': 'bts idole', 'extractor_key': 'Generic'}
+[86.6210331916809082] 2018-12-30 23:38:42,249 - DEBUG - musicbot.entry | In entry.py::MainThread(11556), line 54 in get_ready_future: Created future for None
+[86.6220300197601318] 2018-12-30 23:38:42,250 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 825 in serialize_queue: Serializing queue for 354145440779862018
+[86.6220300197601318] 2018-12-30 23:38:42,250 - INFO - musicbot.entry | In entry.py::MainThread(11556), line 196 in _download: Download cached: https://www.youtube.com/watch?v=pBuZEGYXA6E
+[88.6293449401855469] 2018-12-30 23:38:44,257 - DEBUG - musicbot.entry | In entry.py::MainThread(11556), line 54 in get_ready_future: Created future for audio_cache\youtube-pBuZEGYXA6E-BTS_IDOL_Official_MV.webm
+[88.6293449401855469] 2018-12-30 23:38:44,257 - FFMPEG - musicbot.player | In player.py::MainThread(11556), line 330 in _play: Creating player with options: -nostdin -vn audio_cache\youtube-pBuZEGYXA6E-BTS_IDOL_Official_MV.webm
+[88.6312689781188965] 2018-12-30 23:38:44,259 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 825 in serialize_queue: Serializing queue for 354145440779862018
+[320.0525457859039307] 2018-12-30 23:42:35,680 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 825 in serialize_queue: Serializing queue for 354145440779862018
+[339.7257769107818604] 2018-12-30 23:42:55,353 - INFO - musicbot.bot | In bot.py::MainThread(11556), line 2734 in on_message: 270155491340976128/Akira#0962: !play send it
+[340.1066799163818359] 2018-12-30 23:42:55,734 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 1517 in cmd_play: {'_type': 'url', 'url': 'ytsearch:send it', 'ie_key': None, 'extractor': 'generic', 'webpage_url': 'send it', 'webpage_url_basename': 'send it', 'extractor_key': 'Generic'}
+[347.2103304862976074] 2018-12-30 23:43:02,838 - DEBUG - musicbot.entry | In entry.py::MainThread(11556), line 54 in get_ready_future: Created future for None
+[347.2113296985626221] 2018-12-30 23:43:02,839 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 825 in serialize_queue: Serializing queue for 354145440779862018
+[347.2123255729675293] 2018-12-30 23:43:02,840 - INFO - musicbot.entry | In entry.py::MainThread(11556), line 220 in _really_download: Download started: https://www.youtube.com/watch?v=EaJV2irv7MU
+[349.2184090614318848] 2018-12-30 23:43:04,846 - DEBUG - musicbot.entry | In entry.py::MainThread(11556), line 54 in get_ready_future: Created future for None
+[351.6860690116882324] 2018-12-30 23:43:07,314 - INFO - musicbot.entry | In entry.py::MainThread(11556), line 230 in _really_download: Download complete: https://www.youtube.com/watch?v=EaJV2irv7MU
+[351.6880855560302734] 2018-12-30 23:43:07,316 - FFMPEG - musicbot.player | In player.py::MainThread(11556), line 330 in _play: Creating player with options: -nostdin -vn audio_cache\youtube-EaJV2irv7MU-Austin_Mahone_-_Send_It_ft._Rich_Homie_Quan_Lyric_Video.webm
+[351.6900584697723389] 2018-12-30 23:43:07,318 - DEBUG - musicbot.bot | In bot.py::MainThread(11556), line 825 in serialize_queue: Serializing queue for 354145440779862018
+[474.9076397418975830] 2018-12-30 23:45:10,535 - VOICEDEBUG - musicbot.bot | In bot.py::MainThread(11556), line 2938 in on_voice_state_update: Voice state update for 270155491340976128/Akira#0962 on cube nz/General -> [MUTE, DEAFEN]
